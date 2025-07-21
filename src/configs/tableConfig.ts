@@ -6,12 +6,15 @@ import {
   TableColumnResize,
 } from 'ckeditor5'
 
+import { DistributeColumnsEvenly } from '../plugins'
+
 export const tablePlugins = [
   Table,
   TableToolbar,
   TableProperties,
   TableCellProperties,
   TableColumnResize,
+  DistributeColumnsEvenly,
 ]
 
 export const tableToolbarOptions = ['insertTable']
@@ -24,6 +27,7 @@ export const tableConfig = {
       'mergeTableCells',
       'tableProperties',
       'tableCellProperties',
+      'distributeColumnsEvenly',
     ],
   },
 }

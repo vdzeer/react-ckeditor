@@ -6,6 +6,8 @@ This project demonstrates a modern integration of [CKEditor 5](https://ckeditor.
 
 - **CKEditor 5** integration with React via `@ckeditor/ckeditor5-react`
 - Modular, extensible configuration for fonts, images, tables, lists, links, headings, and more
+- Custom plugins:
+  - **DistributeColumnsEvenly**: Evenly distributes table column widths
 - Clean, idiomatic TypeScript codebase
 - Fast development with Vite
 - ESLint and recommended TypeScript settings
@@ -20,6 +22,7 @@ src/
   components/
     CKEditorDemo/        # CKEditor demo component
   configs/               # Modular CKEditor configuration files
+  plugins/               # Custom CKEditor plugins
 ```
 
 ## Getting Started
@@ -43,6 +46,12 @@ npm run dev
 
 Open [http://localhost:5173](http://localhost:5173) in your browser.
 
+## Custom Plugins
+
+### DistributeColumnsEvenly
+
+Adds a toolbar button to evenly distribute all columns in the selected table.
+
 ## Configuration
 
 All CKEditor configuration is modularized in `src/configs/` for easy extension and reuse. You can add or modify features by editing or adding config files.
@@ -50,6 +59,7 @@ All CKEditor configuration is modularized in `src/configs/` for easy extension a
 ## Extending
 
 - Add new configuration options in `src/configs/`.
+- Add new plugins to `src/plugins/` and register them in the appropriate config.
 - Use the barrel files (`index.ts`) for clean imports.
 
 ## Linting
